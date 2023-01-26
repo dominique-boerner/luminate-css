@@ -1,5 +1,5 @@
 {
-  "name": "neoncss",
+  "name": "luminatecss",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "author": "",
+  "author": "Dominique Börner",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.20.12",
