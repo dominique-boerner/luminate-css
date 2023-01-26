@@ -7,6 +7,7 @@ export default {
 export const Buttons = () => {
   return `
     <div class="flex flex-col">
+        <h2 class="label">Button states</h2>
         <div class="element-row">
             <span class="label">Default:</span>
             <neon-button primary label="Button"></neon-button>
@@ -23,8 +24,8 @@ export const Buttons = () => {
             <neon-button secondary glowing rounded label="Button"></neon-button>
             <neon-button text glowing label="Button"></neon-button>
         </div>
+        <h2 class="label">Error:</h2>
         <div class="element-row">
-            <span class="label">Error:</span>
             <neon-button primary error label="Button"></neon-button>
             <neon-button secondary error rounded label="Button"></neon-button>
             <neon-button text error  label="Button"></neon-button>
