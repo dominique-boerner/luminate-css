@@ -1,0 +1,6 @@
+@use "variables";
+@use "components/index";
+
+body {
+  background: var(--bg-color);
+}
