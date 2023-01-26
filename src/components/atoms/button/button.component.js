@@ -10,15 +10,15 @@
  */
 class NeonButton extends HTMLElement {
   get primary() {
-    return this.getAttribute("primary");
+    return this.hasAttribute("primary");
   }
 
   get secondary() {
-    return this.getAttribute("secondary");
+    return this.hasAttribute("secondary");
   }
 
   get text() {
-    return this.getAttribute("text");
+    return this.hasAttribute("text");
   }
 
   get label() {
@@ -26,11 +26,11 @@ class NeonButton extends HTMLElement {
   }
 
   get rounded() {
-    return this.getAttribute("rounded");
+    return this.hasAttribute("rounded");
   }
 
   get glowing() {
-    return this.getAttribute("glowing");
+    return this.hasAttribute("glowing");
   }
 
   constructor() {
@@ -50,27 +50,27 @@ class NeonButton extends HTMLElement {
   }
 
   _getModeClass() {
-    if (this.primary !== null) {
+    if (this.primary) {
       return "btn--primary";
     }
 
-    if (this.secondary !== null) {
+    if (this.secondary) {
       return "btn--secondary";
     }
 
-    if (this.text !== null) {
+    if (this.text) {
       return "btn--text";
     }
   }
 
   _getRoundedClass() {
-    if (this.rounded !== null) {
+    if (this.rounded) {
       return "btn--rounded";
     }
   }
 
   _getGlowingClass() {
-    if (this.glowing !== null) {
+    if (this.glowing) {
       return "btn--glow";
     }
   }
