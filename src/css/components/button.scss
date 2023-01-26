@@ -1,75 +1,118 @@
 .btn {
-  // configuration for buttons
-  --btn-primary-bg-color: linear-gradient(
-    90deg,
-    var(--primary-color) 0%,
-    var(--secondary-color) 100%
-  );
-  --btn-color: #fff;
-  --btn-glowing: 0 0 8px 0 var(--primary-color),
-    0 0 12px 0 var(--secondary-color);
-
   // default button parameters
   padding: 1rem 2rem;
   border: none;
   font-weight: bold;
   text-transform: uppercase;
+  background: var(--btn-background--color);
+  color: var(--btn-text--color);
+  transition: box-shadow ease-in-out 200ms;
+  box-shadow: var(--btn-shadow);
+  cursor: pointer;
+  outline: none;
 
   // primary button
   &.btn--primary {
-    background: var(--btn-primary-bg-color);
-    color: var(--btn-color);
-    transition: box-shadow ease-in-out 200ms;
+    --btn-text--color: white;
+    --btn-background--color: linear-gradient(
+      90deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
 
     // primary button - hover & focus
     &:not([disabled]):hover,
-    &:not([disabled]):focus {
-      outline: none;
-      cursor: pointer;
-      box-shadow: var(--btn-glowing);
+    &:not([disabled]):focus,
+    &.btn--glow {
+      --btn-shadow: 0 0 8px 0 var(--primary-color),
+        0 0 12px 0 var(--secondary-color);
+    }
+
+    // primary button - error
+    &.btn--error {
+      --btn-background--color: linear-gradient(
+        90deg,
+        var(--error-color-accent-1) 0%,
+        var(--error-color-accent-2) 100%
+      );
+
+      // primary button - error - hover & focus
+      &:not([disabled]):hover,
+      &:not([disabled]):focus {
+        --btn-shadow: 0 0 8px 0 var(--error-color-accent-1),
+          0 0 12px 0 var(--error-color-accent-2);
+      }
     }
   }
 
   // secondary button
   &.btn--secondary {
-    background: transparent;
-    box-shadow: 0 0 4px 0 var(--primary-color), 0 0 4px 0 var(--secondary-color);
-    color: white;
-    transition: box-shadow ease-in-out 200ms;
+    --btn-background--color: transparent;
+    --btn-shadow: 0 0 4px 0 var(--primary-color),
+      0 0 4px 0 var(--secondary-color);
+    --btn-text--color: #fff;
 
     // secondary button - hover & focus
     &:not([disabled]):hover,
-    &:not([disabled]):focus {
-      outline: none;
-      cursor: pointer;
-      box-shadow: var(--btn-glowing);
+    &:not([disabled]):focus,
+    &.btn--glow {
+      --btn-shadow: 0 0 8px 0 var(--primary-color),
+        0 0 12px 0 var(--secondary-color);
+    }
+
+    // secondary button - error
+    &.btn--error {
+      --btn-shadow: 0 0 4px 0 var(--error-color-accent-1),
+        0 0 4px 0 var(--error-color-accent-2);
+
+      // secondary button - error - hover & focus
+      &:not([disabled]):hover,
+      &:not([disabled]):focus,
+      &.btn--glow {
+        --btn-shadow: 0 0 8px 0 var(--error-color-accent-1),
+          0 0 12px 0 var(--error-color-accent-2);
+      }
     }
   }
 
   // text button
   &.btn--text {
-    background: transparent;
-    transition: box-shadow ease-in-out 200ms;
-    background: var(--btn-primary-bg-color);
+    --btn-background--color: linear-gradient(
+      90deg,
+      var(--primary-color) 0%,
+      var(--secondary-color) 100%
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     // text button - hover & focus
     &:not([disabled]):hover,
-    &:not([disabled]):focus {
-      outline: none;
-      cursor: pointer;
-      box-shadow: var(--btn-glowing);
+    &:not([disabled]):focus,
+    &.btn--glow {
+      --btn-shadow: 0 0 8px 0 var(--primary-color),
+        0 0 12px 0 var(--secondary-color);
+    }
+
+    // text button - error
+    &.btn--error {
+      --btn-background--color: linear-gradient(
+        90deg,
+        var(--error-color-accent-1) 0%,
+        var(--error-color-accent-2) 100%
+      );
+
+      // text button - error - hover & focus
+      &:not([disabled]):hover,
+      &:not([disabled]):focus,
+      .btn--glow {
+        --btn-shadow: 0 0 4px 0 var(--error-color-accent-1),
+          0 0 4px 0 var(--error-color-accent-2);
+      }
     }
   }
 
   // rounded button
   &.btn--rounded {
     border-radius: 2rem;
-  }
-
-  // glowing button
-  &.btn--glow {
-    box-shadow: var(--btn-glowing);
   }
 }

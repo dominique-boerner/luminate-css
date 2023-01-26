@@ -23,6 +23,12 @@ export const Buttons = () => {
             <neon-button secondary glowing rounded label="Button"></neon-button>
             <neon-button text glowing label="Button"></neon-button>
         </div>
+        <div class="element-row">
+            <span class="label">Error:</span>
+            <neon-button primary error label="Button"></neon-button>
+            <neon-button secondary error rounded label="Button"></neon-button>
+            <neon-button text error  label="Button"></neon-button>
+        </div>
     </div>
   `;
 };

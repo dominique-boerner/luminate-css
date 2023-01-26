@@ -4,9 +4,12 @@
 
 .element-row {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
   margin-bottom: 1rem;
+}
+
+.element-row > * {
+  padding: 1rem;
 }
 
 .element-row .label {
