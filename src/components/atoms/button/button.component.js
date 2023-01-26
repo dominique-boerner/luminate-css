@@ -36,11 +36,13 @@ class NeonButton extends HTMLElement {
   constructor() {
     super();
     this.innerHTML = `
-    <button class="btn ${this._getButtonClass()}">${this.label}</button>`;
+    <button class="${this._generateButtonClassList()}">${this.label}</button>`;
   }
 
-  _getButtonClass() {
+  _generateButtonClassList() {
+    const btnBaseClass = "btn";
     return [
+      btnBaseClass,
       this._getModeClass(),
       this._getRoundedClass(),
       this._getGlowingClass(),
