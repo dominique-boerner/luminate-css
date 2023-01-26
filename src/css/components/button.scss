@@ -43,6 +43,22 @@
           0 0 12px 0 var(--error-color-accent-2);
       }
     }
+
+    // primary button - success
+    &.btn--success {
+      --btn-background--color: linear-gradient(
+        90deg,
+        var(--success-color-accent-1) 0%,
+        var(--success-color-accent-2) 100%
+      );
+
+      // primary button - success - hover & focus
+      &:not([disabled]):hover,
+      &:not([disabled]):focus {
+        --btn-shadow: 0 0 8px 0 var(--success-color-accent-1),
+          0 0 12px 0 var(--success-color-accent-2);
+      }
+    }
   }
 
   // secondary button
@@ -71,6 +87,20 @@
       &.btn--glow {
         --btn-shadow: 0 0 8px 0 var(--error-color-accent-1),
           0 0 12px 0 var(--error-color-accent-2);
+      }
+    }
+
+    // secondary button - success
+    &.btn--success {
+      --btn-shadow: 0 0 4px 0 var(--success-color-accent-1),
+        0 0 4px 0 var(--success-color-accent-2);
+
+      // secondary button - success - hover & focus
+      &:not([disabled]):hover,
+      &:not([disabled]):focus,
+      &.btn--glow {
+        --btn-shadow: 0 0 8px 0 var(--success-color-accent-1),
+          0 0 12px 0 var(--success-color-accent-2);
       }
     }
   }
@@ -107,6 +137,23 @@
       .btn--glow {
         --btn-shadow: 0 0 4px 0 var(--error-color-accent-1),
           0 0 4px 0 var(--error-color-accent-2);
+      }
+    }
+
+    // text button - success
+    &.btn--success {
+      --btn-background--color: linear-gradient(
+        90deg,
+        var(--success-color-accent-1) 0%,
+        var(--success-color-accent-2) 100%
+      );
+
+      // text button - success - hover & focus
+      &:not([disabled]):hover,
+      &:not([disabled]):focus,
+      .btn--glow {
+        --btn-shadow: 0 0 4px 0 var(--success-color-accent-1),
+          0 0 4px 0 var(--success-color-accent-2);
       }
     }
   }

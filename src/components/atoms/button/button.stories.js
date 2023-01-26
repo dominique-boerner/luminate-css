@@ -24,11 +24,17 @@ export const Buttons = () => {
             <neon-button secondary glowing rounded label="Button"></neon-button>
             <neon-button text glowing label="Button"></neon-button>
         </div>
-        <h2 class="label">Error:</h2>
+        <h2 class="label">Error</h2>
         <div class="element-row">
             <neon-button primary error label="Button"></neon-button>
             <neon-button secondary error rounded label="Button"></neon-button>
             <neon-button text error  label="Button"></neon-button>
+        </div>
+        <h2 class="label">Success</h2>
+        <div class="element-row">
+            <neon-button primary success label="Button"></neon-button>
+            <neon-button secondary success rounded label="Button"></neon-button>
+            <neon-button text success  label="Button"></neon-button>
         </div>
     </div>
   `;

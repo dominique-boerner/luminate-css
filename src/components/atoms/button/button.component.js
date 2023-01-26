@@ -25,6 +25,10 @@ class NeonButton extends HTMLElement {
     return this.hasAttribute("error");
   }
 
+  get success() {
+    return this.hasAttribute("success");
+  }
+
   get label() {
     return this.getAttribute("label");
   }
@@ -74,6 +78,10 @@ class NeonButton extends HTMLElement {
   _getSeverityClass() {
     if (this.error) {
       return "btn--error";
+    }
+
+    if (this.success) {
+      return "btn--success";
     }
   }
 
