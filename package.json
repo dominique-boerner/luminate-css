@@ -6,7 +6,7 @@
   "scripts": {
     "sass": "sass -w src/css/luminate-css.scss src/luminate-css.css",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:build": "build-storybook"
   },
   "author": "Dominique Börner",
   "license": "ISC",
