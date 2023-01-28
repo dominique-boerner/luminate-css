@@ -1,4 +1,12 @@
+# IDE specific
 .idea
+
+# project specific
 node_modules
+
+# generated
 luminate-css.css
 luminate-css.css.map
+
+# dist
+storybook-static
